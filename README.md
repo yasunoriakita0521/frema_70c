@@ -25,6 +25,8 @@
 
 
 ## addressesテーブル
+|Column|Type|Options|
+|------|----|-------|
 |firstname|string|null: false|
 |lastname|string|null: false|
 |firstname_kana|string|null: false|
@@ -41,6 +43,8 @@
 - belongs_to :user
 
 ## cardsテーブル
+|Column|Type|Options|
+|------|----|-------|
 |card_number|integer|null: false|
 |CVC|integer|null: false|
 |limit_year|integer|null: false|
@@ -52,6 +56,8 @@
 - belongs_to :user
 
 ## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
 |content|text|null: false|
 |user_id|integer|null: false,foreign_key:true|
 |item_id|integer|null: false,foreign_key:true|
@@ -61,6 +67,8 @@
 - belongs_to :item
 
 ## itemsテーブル
+|Column|Type|Options|
+|------|----|-------|
 |name|string|null: false|
 |description|text|null: false|
 |category|string|null: false|
@@ -84,6 +92,8 @@
 
 
 ## imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
 |image|string|null: false|
 |item_id|integer|null: false,foreign_key:true|
 
@@ -92,12 +102,16 @@
 
 
 ## brandsテーブル
+|Column|Type|Options|
+|------|----|-------|
 |name|string|null: false|
 
 ### Association
 - has_many :items
 
 ## categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
 |name|string|null: false|
 |ancestry|string||
 

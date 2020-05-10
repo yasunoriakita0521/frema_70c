@@ -20,9 +20,13 @@
 |user_image|string||
 
 ### Association
-- has_many :items
-- has_many :addresses
+- has_many :items,dependent: :destroy
+- has_many :comments
+- has_one  :card
+- has_one  :address
 
+### index
+add_index: [:nickname, :email]
 
 ## addressesテーブル
 
@@ -43,6 +47,10 @@
 ### Association
 - belongs_to :user
 
+### index
+add_index: [:prefecture, :user_id]
+
+
 ## cardsテーブル
 
 |Column|Type|Options|
@@ -57,6 +65,9 @@
 ### Association
 - belongs_to :user
 
+### index
+add_index: [:user_id]
+
 ## commentsテーブル
 
 |Column|Type|Options|
@@ -68,6 +79,10 @@
 ### Association
 - belongs_to :user
 - belongs_to :item
+
+### index
+add_index: [:user_id, :item_id]
+
 
 ## itemsテーブル
 
@@ -92,15 +107,18 @@
 - belongs_to :user
 - belongs_to :brand
 - belongs_to :category
-- has_many :images
+- has_many :images,dependent: :destroy
 - has_many :comments
+
+### index
+add_index: [:name, :price]
 
 
 ## imagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|image|string|null: false|
+|url|string|null: false|
 |item_id|integer|null: false,foreign_key:true|
 
 ### Association
@@ -116,6 +134,9 @@
 ### Association
 - has_many :items
 
+### index
+add_index: [:name]
+
 ## categoriesテーブル
 
 |Column|Type|Options|
@@ -126,3 +147,5 @@
 ### Association
 - has_many :items
 
+### index
+add_index: [:name]

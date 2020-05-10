@@ -25,6 +25,7 @@
 
 
 ## addressesテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |firstname|string|null: false|
@@ -43,6 +44,7 @@
 - belongs_to :user
 
 ## cardsテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |card_number|integer|null: false|
@@ -56,6 +58,7 @@
 - belongs_to :user
 
 ## commentsテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |content|text|null: false|
@@ -67,6 +70,7 @@
 - belongs_to :item
 
 ## itemsテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -92,6 +96,7 @@
 
 
 ## imagesテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |image|string|null: false|
@@ -102,6 +107,7 @@
 
 
 ## brandsテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -110,6 +116,7 @@
 - has_many :items
 
 ## categoriesテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|

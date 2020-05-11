@@ -1,6 +1,6 @@
-- contents = ["マイページ"  ,"いいね一覧","出品する"        ,"出品した商品","購入した商品","評価一覧","発送元・お届け先変更","支払い方法","ログアウト"               ]
-- links    = [user_path(1),""         ,new_product_path,""          ,""          ,""       ,""                ,""         ,destroy_user_session_path]
-- method   = ["get"       ,""         ,"get"           ,""          ,""          ,""       ,""                ,""         ,"delete"                ]
+- contents = ["マイページ"  ,"出品する","ログアウト"]
+- links    = [user_path(1),new_product_path,destroy_user_session_path]
+- method   = ["get","get","delete"]
 
 = render "layouts/header"
 .show-users-wrapper

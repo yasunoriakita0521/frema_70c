@@ -1,8 +1,13 @@
+$frema: #3CCACE;
+
+@import "reset";
+@import "config/colors";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
+@import "items";
 @import "users";
 @import "users_show";
+@import "modules/flash";
 
 
 
@@ -15,6 +20,7 @@
   color: #333;
 }
 
+
 body{
   padding: 0;
   margin: 0;
@@ -22,7 +28,7 @@ body{
 
 a{
   text-decoration: none;
-  color: #eee;
+  color: #333;
   &:hover{
     text-decoration: underline;
     opacity: 0.5;

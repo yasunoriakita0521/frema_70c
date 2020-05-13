@@ -1,6 +1,6 @@
-- contents = ["マイページ"  ,"出品する","ログアウト"]
-- links    = [user_path(1),new_product_path,destroy_user_session_path]
-- method   = ["get","get","delete"]
+- contents = ["マイページ"  ,"出品する","会員情報変更","住所変更","カード情報照会・削除","ログアウト"]
+- links    = [user_path(1),new_item_path,root_path,root_path,root_path,destroy_user_session_path]
+- method   = ["get"       ,"get"           ,"get"          ,"get"          ,"get"       ,"delete"]
 
 = render "layouts/header"
 .show-users-wrapper
@@ -10,10 +10,10 @@
         = link_to links[i], method: method[i],class: "show-users-wrapper__center__left-content__box" do
           = content
     .show-users-wrapper__center__right-content
-      = image_tag "2999105_m.jpg", class:"show-users-wrapper__center__right-content__image"
-      = image_tag "u4vzSnv__400x400.jpg", class:"show-users-wrapper__center__right-content__user-image"
+      = image_tag "https://i.gyazo.com/4df8e0219cb8f56f8b95df121f3dda86.jpg", class:"show-users-wrapper__center__right-content__image"
+      = image_tag "https://i.gyazo.com/744692893080cea9439107aa6279c07f.png", class:"show-users-wrapper__center__right-content__user-image"
       .show-users-wrapper__center__right-content__user-name
-        令和の織田信長(本物)
+        フリマ太郎
         %div
           評価12
           出品20

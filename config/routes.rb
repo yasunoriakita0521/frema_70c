@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+  }
   $date = Time.now.in_time_zone('Tokyo').to_s
   root "items#index"
   resources :items do
@@ -18,5 +20,6 @@ Rails.application.routes.draw do
       get "new_address"
       get "create_address"
     end
-  end
+  end  
 end
+
